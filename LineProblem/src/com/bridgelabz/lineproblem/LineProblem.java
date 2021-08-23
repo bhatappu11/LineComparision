@@ -4,7 +4,7 @@ import java.util.*;
 public class LineProblem {
 
 	public static void main(String[] args) {
-		System.out.println("Welcome to line comparision computation");
+		System.out.println("Welcome to Line Comparision Computation");
 		int x1,x2,x3,x4,y1,y2,y3,y4;
 		double l1,l2;
 		String length1,length2;
@@ -24,11 +24,12 @@ public class LineProblem {
                 l2=Math.sqrt(Math.pow(x4 - x3, 2) + Math.pow(y4 - y3, 2));
 		length1=String.valueOf(Math.round(l1));
 		length2=String.valueOf(Math.round(l2));
-  	        if(length1.equals(length2))
+  	        if(length1.compareTo(length2)==0)
 			System.out.println("equal");
+		else if(length1.compareTo(length2)<0)
+			System.out.println("l1 is less than l2");
 		else
-			System.out.println("not equal");
-
+			System.out.println("l1 is greater than l2");
 	}
 
 }
