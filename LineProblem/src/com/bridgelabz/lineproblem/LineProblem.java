@@ -13,6 +13,14 @@ public class LineProblem {
 			System.out.println("not equal");
   	    
 	}
+	public static void compareLines(String length1,String length2) {
+		 if(length1.compareTo(length2)==0)
+				System.out.println("equal");
+		 else if(length1.compareTo(length2)<0)
+				System.out.println("line 1 is less than line 2");
+		 else
+				System.out.println("line 1 is greater than line 2");
+	}
 
 	public static void main(String[] args) {
 		System.out.println("Welcome to line comparision computation");
@@ -35,7 +43,10 @@ public class LineProblem {
 	  	l2=findLength(x3, y3, x4, y4);
 		length1=String.valueOf(Math.round(l1));
 		length2=String.valueOf(Math.round(l2));
+		System.out.println("Using equals method");
 		findEquality(length1, length2);
+		System.out.println("Using compareTo method");
+		compareLines(length1,length2);
 		sc.close();
 	}
 
