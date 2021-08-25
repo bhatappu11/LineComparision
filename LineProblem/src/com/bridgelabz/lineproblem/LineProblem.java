@@ -2,7 +2,14 @@ package com.bridgelabz.lineproblem;
 
 import java.util.*;
 public class LineProblem {
-	public static double findLength(int x1,int y1, int x2, int y2) {
+	int x1,x2,y1,y2;
+	public LineProblem(int x1,int y1,int x2,int y2) {
+		this.x1 = x1;
+		this.y1 = y1;
+		this.x2 = x2;
+		this.y2 = y2;
+	}
+	public double findLength() {
 		double length=Math.sqrt(Math.pow(x2 - x1, 2) + Math.pow(y2 - y1, 2));
 		return length;
 	}
@@ -24,23 +31,14 @@ public class LineProblem {
 
 	public static void main(String[] args) {
 		System.out.println("Welcome to line comparision computation");
-		int x1,x2,x3,x4,y1,y2,y3,y4;
 		double l1,l2;
 		String length1,length2;
 		Scanner sc=new Scanner(System.in);
-		System.out.println("enter (x1,y1) and (x2,y2) points");
-		x1=sc.nextInt();
-		y1=sc.nextInt();
- 		x2=sc.nextInt();
- 		y2=sc.nextInt();
-		System.out.println("enter (x3,y3) and (x4,y4) points");
-        x3=sc.nextInt();
-        y3=sc.nextInt();
-        x4=sc.nextInt();
-        y4=sc.nextInt();
+		LineProblem line1 = new LineProblem(1, 8, 3, 4);
+		LineProblem line2 = new LineProblem(2, 9, 3, 6);
 
-	  	l1=findLength(x1, y1, x2, y2);
-	  	l2=findLength(x3, y3, x4, y4);
+	  	l1 = line1.findLength();
+	  	l2 = line2.findLength();
 		length1=String.valueOf(Math.round(l1));
 		length2=String.valueOf(Math.round(l2));
 		System.out.println("Using equals method");
