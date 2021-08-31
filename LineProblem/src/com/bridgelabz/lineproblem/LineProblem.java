@@ -23,8 +23,8 @@ public class LineProblem {
 		int line2Y2 = scanner.nextInt();
 		line2.setEndCoordinates(line2X2, line2Y2);
 					
-		lineComparision.findEquality(line1.findLength(),line2.findLength());
-		lineComparision.compareLines(line1.findLength(),line2.findLength());
+		lineComparision.findEquality(line1,line2);
+		lineComparision.compareLines(line1,line2);
 		scanner.close();
 	}
 

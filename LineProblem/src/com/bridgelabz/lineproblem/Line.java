@@ -20,8 +20,5 @@ public class Line {
 		startCoordinates.setxCoordinate(x2);
 		endCoordinates.setyCoordinate(y2);
 	}
-	public Double findLength() {
-		Double length = Double.valueOf(Math.sqrt(Math.pow((startCoordinates.getxCoordinate()-endCoordinates.getxCoordinate()),2)+Math.pow((startCoordinates.getyCoordinate()-endCoordinates.getyCoordinate()),2)));
-		return length;
-	}
+	
 }
